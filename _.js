@@ -1,15 +1,31 @@
 📦
-243 /index.js.map
-73 /index.js
+315 /index.js.map
+129 /index.js
+370 /main.js.map
+171 /main.js
 132122 /node_modules/frida-il2cpp-bridge/dist/index.js
 ↻ frida-il2cpp-bridge
 ✄
-{"version":3,"file":"index.js","sourceRoot":"D:/Frida/frida-il2cpp-script-test/frida-il2cpp-script-test/","sources":["index.ts"],"names":[],"mappings":"AAAA,OAAO,qBAAqB,CAAC;AAC7B,MAAM,CAAC,OAAO,CAAC,GAAG,EAAE;IAChB,YAAY;AAChB,CAAC,CAAC,CAAC"}
+{"version":3,"file":"index.js","sourceRoot":"D:/Frida/frida-il2cpp-script-test/frida-il2cpp-script-test/","sources":["index.ts"],"names":[],"mappings":"AAAA,OAAO,qBAAqB,CAAC;AAC7B,OAAO,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AAClC,YAAY,CAAC,KAAK,CAAC,CAAC;AACpB,MAAM,CAAC,OAAO,CAAC,GAAG,EAAE;IAChB,YAAY;AAChB,CAAC,CAAC,CAAC"}
 ✄
 import "frida-il2cpp-bridge";
+import { start } from "./main.js";
+setImmediate(start);
 Il2Cpp.perform(() => {
     // code here
 });
+✄
+{"version":3,"file":"main.js","sourceRoot":"D:/Frida/frida-il2cpp-script-test/frida-il2cpp-script-test/","sources":["main.js"],"names":[],"mappings":"AAAA,MAAM,UAAU,KAAK;IACjB,MAAM,CAAC,OAAO,CAAC,GAAG,EAAE;QAChB,OAAO;QACP,OAAO,CAAC,GAAG,CAAC,YAAY,CAAC,CAAC;QAC1B,MAAM,CAAC,IAAI,EAAE,CAAC;QACd,OAAO,CAAC,GAAG,CAAC,UAAU,CAAC,CAAC;IAC5B,CAAC,CAAC,CAAC;AACP,CAAC;AAAA,CAAC"}
+✄
+export function start() {
+    Il2Cpp.perform(() => {
+        // dunp
+        console.log('dump start');
+        Il2Cpp.dump();
+        console.log('dump end');
+    });
+}
+;
 ✄
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
